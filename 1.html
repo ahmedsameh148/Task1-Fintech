@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <style>
+            .h1{
+                color: blue;
+            }
+        </style>
+        <script type = "text/javascript">
+            function Calc(){
+                if(document.getElementById('num1').value === "")
+                    document.getElementById('num1').value = "0";
+                if(document.getElementById('num2').value === "")
+                    document.getElementById('num2').value = "0";
+                number1 = Number(document.getElementById('num1').value);
+                number2 = Number(document.getElementById('num2').value);
+                result = number1 + number2;
+                document.getElementById('result').value = result;
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 class="h1">Hello World</h1>
+        <input type = 'number' id = 'num1' value = "5"/>
+        <input type = 'number' id = 'num2' value = "6"/>
+        <input type = 'number' id = 'result'/>
+        <button type = 'button' id = 'calc' onclick="Calc()">Calc</button>
+    </body>
+</html>
